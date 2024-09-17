@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Universal Unit Converter</h1>
+        <div class="input-container">
+            <label for="convertType">Choose Conversion Type:</label>
+            <select id="convertType" onchange="showConversionFields()">
+                <option value="length">Length</option>
+                <option value="weight">Weight</option>
+                <option value="currency">Currency</option>
+                <option value="temperature">Temperature</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="inputValue">Enter Value:</label>
+            <input type="number" id="inputValue" placeholder="Enter the value">
+        </div>
+        <div class="input-container">
+            <label for="inputUnit">Input Unit:</label>
+            <select id="inputUnit"></select>
+        </div>
+        <div class="input-container">
+            <label for="outputUnit">Output Unit:</label>
+            <select id="outputUnit"></select>
+        </div>
+        <button onclick="convert()">Convert</button>
+        <div class="result-container">
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
